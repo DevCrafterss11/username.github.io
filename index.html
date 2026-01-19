@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Your Name | Products & Contact</title>
+    <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+<header class="nav">
+    <div class="brand">
+        <a href="index.html" class="logo">YourBrand</a>
+        <span class="tagline" data-i18n="tagline">Manufacturer / Supplier</span>
+    </div>
+    <nav class="links">
+        <a href="index.html" class="active" data-i18n="nav_home">Home</a>
+        <a href="products.html" data-i18n="nav_products">Products</a>
+        <a href="#contact" data-i18n="nav_contact">Contact</a>
+        <button class="btn-ghost" id="langBtn" type="button">中文</button>
+    </nav>
+</header>
+
+<main class="container">
+    <section class="hero">
+        <div>
+            <h1 data-i18n="hero_title">Hi, I'm Your Name.</h1>
+            <p class="lead" data-i18n="hero_desc">
+                I help global buyers source reliable products with fast response and stable quality.
+            </p>
+
+            <div class="cta">
+                <a class="btn" href="products.html" data-i18n="cta_products">View Products</a>
+                <a class="btn-outline" href="#contact" data-i18n="cta_quote">Request a Quote</a>
+            </div>
+
+            <div class="chips">
+                <span class="chip" data-i18n="chip_1">OEM/ODM</span>
+                <span class="chip" data-i18n="chip_2">Fast Delivery</span>
+                <span class="chip" data-i18n="chip_3">English Support</span>
+            </div>
+        </div>
+
+        <div class="card">
+            <h3 data-i18n="quick_title">Quick Info</h3>
+            <ul class="list">
+                <li><strong data-i18n="qi_1_k">Location:</strong> <span data-i18n="qi_1_v">China</span></li>
+                <li><strong data-i18n="qi_2_k">MOQ:</strong> <span data-i18n="qi_2_v">Negotiable</span></li>
+                <li><strong data-i18n="qi_3_k">Lead time:</strong> <span data-i18n="qi_3_v">7–15 days</span></li>
+                <li><strong data-i18n="qi_4_k">Payment:</strong> <span data-i18n="qi_4_v">T/T, PayPal (sample)</span></li>
+            </ul>
+            <div class="contact-row">
+                <a class="btn-small" id="waLink" target="_blank" rel="noopener">WhatsApp</a>
+                <a class="btn-small" id="tgLink" target="_blank" rel="noopener">Telegram</a>
+                <a class="btn-small" href="mailto:you@example.com">Email</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2 data-i18n="about_title">About</h2>
+        <p data-i18n="about_desc">
+            Briefly introduce your company, factory capacity, quality control, and what makes you reliable.
+        </p>
+
+        <div class="grid-3">
+            <div class="card">
+                <h3 data-i18n="about_1_t">Quality</h3>
+                <p data-i18n="about_1_d">Incoming inspection, in-process QC, and final checks.</p>
+            </div>
+            <div class="card">
+                <h3 data-i18n="about_2_t">Communication</h3>
+                <p data-i18n="about_2_d">Reply within 12 hours. Clear specs and photos.</p>
+            </div>
+            <div class="card">
+                <h3 data-i18n="about_3_t">Service</h3>
+                <p data-i18n="about_3_d">Samples, custom branding, and after-sales support.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="contact">
+        <h2 data-i18n="contact_title">Request a Quote</h2>
+        <p class="muted" data-i18n="contact_desc">
+            Tell me what you need. I will reply with price, MOQ, and lead time.
+        </p>
+
+        <!-- 用 Formspree：把 action 换成你自己的表单地址 -->
+        <form class="form" action="https://formspree.io/f/XXXXYYYY" method="POST">
+            <div class="grid-2">
+                <label>
+                    <span data-i18n="f_name">Name</span>
+                    <input name="name" required />
+                </label>
+                <label>
+                    <span data-i18n="f_email">Email</span>
+                    <input type="email" name="email" required />
+                </label>
+            </div>
+
+            <div class="grid-2">
+                <label>
+                    <span data-i18n="f_company">Company (optional)</span>
+                    <input name="company" />
+                </label>
+                <label>
+                    <span data-i18n="f_country">Country (optional)</span>
+                    <input name="country" />
+                </label>
+            </div>
+
+            <label>
+                <span data-i18n="f_need">What products do you need?</span>
+                <textarea name="message" rows="6" placeholder="Product name, specs, quantity, target price..."></textarea>
+            </label>
+
+            <input type="hidden" name="_subject" value="New Quote Request from Website" />
+            <button class="btn" type="submit" data-i18n="f_submit">Send</button>
+        </form>
+
+        <p class="small muted">
+            <span data-i18n="contact_note">Prefer instant chat?</span>
+            <a id="waLink2" target="_blank" rel="noopener">WhatsApp</a> /
+            <a id="tgLink2" target="_blank" rel="noopener">Telegram</a>
+        </p>
+    </section>
+
+    <footer class="footer">
+        <span>© <span id="year"></span> YourBrand</span>
+        <span class="muted">|</span>
+        <a href="products.html" data-i18n="footer_products">Products</a>
+    </footer>
+</main>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
